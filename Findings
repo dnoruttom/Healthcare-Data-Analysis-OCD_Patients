@@ -1,0 +1,8 @@
+
+
+SELECT YEAR(`OCD Diagnosis Date`) AS Year, 
+	   MONTH(`OCD Diagnosis Date`) AS  Month, 
+       count(*) AS patient_count 
+FROM healthcare.ocd_patient_dataset_cleaned
+GROUP BY Year, Month
+ORDER BY Year, Month;
